@@ -3,46 +3,47 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Aimpur Tools - Essential Calculators for Students',
-  description: 'Free online tools including CGPA converters, attendance calculators, salary calculators, and grade calculators designed for students.',
+  title: 'InterioWeb - Website Design, SEO & Branding for Interior Designers',
+  description: 'Professional website design, SEO, and branding services for interior designers. Build your digital presence with custom websites and free design calculators.',
   generator: 'Next.js',
-  applicationName: 'Next.js',
-  keywords: ['Aimpur Tools', 'Calculators', 'Students'],
+  applicationName: 'InterioWeb',
+  keywords: ['interior design websites', 'interior designer SEO', 'design business branding', 'interior design tools', 'design calculators', 'interior design marketing'],
   icons: {
-    icon: '/aimpur-tools-favicon.png',
-    shortcut: '/aimpur-tools-favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
   },
-  publisher: "Aimpur.com",
-  authors: "Aimpur Team",
+  publisher: "InterioWeb",
+  authors: "InterioWeb Team",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://aimpur.com/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://interioweb.com/"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: 'Aimpur Tools - Essential Calculators for Students',
-    description: 'Free online tools including CGPA converters, attendance calculators, salary calculators, and grade calculators designed for students.',
-    url: 'https://aimpur.com/tools',
-    siteName: 'Aimpur Tools',
+    title: 'InterioWeb - Website Design, SEO & Branding for Interior Designers',
+    description: 'Professional website design, SEO, and branding services for interior designers. Build your digital presence with custom websites and free design calculators.',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://interioweb.com',
+    siteName: 'InterioWeb',
     images: [
       {
-        url: '/aimpur-tools-og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aimpur Tools - Essential Calculators for Students',
+        alt: 'InterioWeb - Digital Solutions for Interior Designers',
       },
     ],
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@myaimpur',
-    title: 'Aimpur Tools - Essential Calculators for Students',
-    description: 'Free online tools including CGPA converters, attendance calculators, salary calculators, and grade calculators designed for students.',
-    image: '/aimpur-tools-og-image.jpg',
+    site: '@interioweb',
+    title: 'InterioWeb - Website Design, SEO & Branding for Interior Designers',
+    description: 'Professional website design, SEO, and branding services for interior designers. Build your digital presence with custom websites and free design calculators.',
+    image: '/og-image.jpg',
   },
   robots: {
     index: true,
@@ -67,7 +68,8 @@ export default function LandingLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet" />
       </head>
 
       <body className="min-h-screen bg-background">

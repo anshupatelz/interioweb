@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image";
 import { Separator } from "@/components/ui/separator"
 
 export default function Footer() {
@@ -9,19 +8,21 @@ export default function Footer() {
 
                 <div className="flex flex-col items-center">
                     <div className="max-w-150 flex flex-col items-center">
-                        {/* <h3 className="text-xl font-bold mb-4 text-primary">Aimpur Tools</h3> */}
-                        <Image src="/aimpur-tools-logo.png" alt="Aimpur Tools" width={200} height={32} className="mb-4" />
-                        <p className="text-sm text-muted-foreground text-center leading-relaxed mb-6">
-                            Your comprehensive toolkit for academic and professional calculations.
-                            Free tools designed to simplify complex calculations for students and professionals.
+                        <h3 className="text-3xl font-bold mb-4">
+                            <span className="text-primary">Interio</span>
+                            <span className="text-secondary">Web</span>
+                        </h3>
+                        <p className="text-sm text-muted-foreground text-center leading-relaxed mb-6 max-w-2xl">
+                            Empowering interior designers with beautiful websites, powerful SEO, and free tools
+                            to grow their digital presence and attract more clients.
                         </p>
                         <div className="flex space-x-4">
-                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                <span className="text-primary font-semibold">✓</span>
+                            <div className="w-10 h-10 bg-green-600/10 rounded-lg flex items-center justify-center">
+                                <span className="text-green-600 font-semibold text-xl">✓</span>
                             </div>
                             <div>
-                                <p className="text-sm font-medium">Always Free</p>
-                                <p className="text-xs text-muted-foreground">No hidden charges</p>
+                                <p className="text-sm font-medium">Built for Designers</p>
+                                <p className="text-xs text-muted-foreground">Like you</p>
                             </div>
                         </div>
                     </div>
@@ -29,8 +30,12 @@ export default function Footer() {
 
                 <Separator className="my-8" />
                 <div className="flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-                    <p>&copy; 2025 Aimpur Tools. All rights reserved.</p>
-                    <p className="mt-2 md:mt-0">Built with ❤️ by Aimpur Team</p>
+                    <p>&copy; 2025 InterioWeb. All rights reserved.</p>
+                    <div className="mt-2 md:mt-0 flex gap-6">
+                        <Link href="/about" className="hover:text-primary transition-colors">About</Link>
+                        <Link href="/tools" className="hover:text-primary transition-colors">Tools</Link>
+                        <Link href="/get-started" className="hover:text-primary transition-colors">Get Started</Link>
+                    </div>
                 </div>
             </div>
         </footer >
