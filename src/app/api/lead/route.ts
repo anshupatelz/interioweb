@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from "next/server"
 import { MongoClient } from "mongodb"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend lazily to avoid build-time errors
+function getResendClient() {
+    return new Resend(process.env.RESEND_API_KEY)
+}
 
 export async function POST(request: NextRequest) {
     try {
@@ -38,6 +41,7 @@ export async function POST(request: NextRequest) {
 
         // Send email notification via Resend
         try {
+            const resend = getResendClient()
             await resend.emails.send({
                 from: process.env.RESEND_FROM_EMAIL || "leads@interioweb.com",
                 to: ["your-email@example.com"], // Replace with your email
