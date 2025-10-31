@@ -33,7 +33,14 @@ const mainMenu: NavItem[] = [
             { name: "Branding & Identity", link: "/services/branding" },
         ],
     },
-    { name: "Tools", link: "/tools" },
+    {
+        name: "Tools",
+        link: "/tools",
+        children: [
+            { name: "Tile Calculator", link: "/tools/tile-calculator" },
+            { name: "Paint Calculator", link: "/tools/paint-calculator" },
+        ],
+    },
     { name: "About", link: "/about" },
 ]
 

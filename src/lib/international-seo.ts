@@ -7,7 +7,7 @@ export interface HreflangTag {
 
 export function generateHreflangTags(pathname: string): HreflangTag[] {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://interioweb.com"
-    
+
     return [
         { hreflang: "x-default", href: `${baseUrl}${pathname}` },
         { hreflang: "en", href: `${baseUrl}${pathname}` },
