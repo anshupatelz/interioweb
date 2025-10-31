@@ -39,6 +39,7 @@ const mainMenu: NavItem[] = [
         children: [
             { name: "Tile Calculator", link: "/tools/tile-calculator" },
             { name: "Paint Calculator", link: "/tools/paint-calculator" },
+            { name: "Room Size Calculator", link: "/tools/room-size-calculator" },
         ],
     },
     { name: "About", link: "/about" },
