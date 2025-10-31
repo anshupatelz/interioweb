@@ -1,6 +1,7 @@
 import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
+import { InternationalProvider } from '@/contexts/InternationalContext';
 
 export const metadata = {
   title: 'InterioWeb - Website Design, SEO & Branding for Interior Designers',
@@ -73,7 +74,9 @@ export default function LandingLayout({
       </head>
 
       <body className="min-h-screen bg-background">
-        {children}
+        <InternationalProvider>
+          {children}
+        </InternationalProvider>
       </body>
 
       {/* GA4 Tracking Code */}

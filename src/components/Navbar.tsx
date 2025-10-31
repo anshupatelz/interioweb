@@ -13,6 +13,7 @@ import {
     NavigationMenuContent,
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import { CountrySwitcher } from "@/components/CountrySwitcher"
 
 type NavItem = {
     name: string
@@ -97,6 +98,8 @@ export default function Navbar() {
                             </NavigationMenuList>
                         </NavigationMenu>
 
+                        <CountrySwitcher />
+
                         <Link href="/get-started">
                             <Button size="sm" className="font-medium cursor-pointer">
                                 Get Started
@@ -147,7 +150,8 @@ export default function Navbar() {
                                 </div>
                             ))}
 
-                            <div className="mt-2">
+                            <div className="mt-2 flex items-center gap-2">
+                                <CountrySwitcher />
                                 <Link href="mailto:anshu@aimpur.com">
                                     <Button size="sm" className="font-medium cursor-pointer">
                                         Contact
